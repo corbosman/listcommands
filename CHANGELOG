@@ -1,0 +1,8 @@
+CHANGELOG listcommands
+======================
+
+RELEASE 2.0
+-----------
+
+- bugfix: change imap_init to storage_init
+
