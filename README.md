@@ -1,0 +1,4 @@
+listcommands
+============
+
+listcommands roundcube plugin
