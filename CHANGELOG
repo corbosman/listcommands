@@ -1,6 +1,9 @@
 CHANGELOG listcommands
 ======================
 
+- bugfix: prevent error when multiple identical headers are present
+- added spanish translation, pull request https://github.com/corbosman/listcommands/pull/5
+
 RELEASE 2.0
 -----------
 

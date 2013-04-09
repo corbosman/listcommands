@@ -6,7 +6,7 @@
   * header in the header box to easily perform certain mailinglist commands
   * like subscribing, unsubscribing, asking for help, and sending a new mail.
   *
-  * @version 1.0.3
+  * @version 2.1
   * @author Cor Bosman
   * 
   */
@@ -19,12 +19,12 @@ class listcommands extends rcube_plugin
   {
     $rcmail = rcmail::get_instance();
     if (!$rcmail->action || in_array($rcmail->action, array('list', 'show', 'preview'))) {
-      $this->add_hook('storage_init', array($this, 'imap_init'));
+      $this->add_hook('storage_init', array($this, 'storage_init'));
       $this->add_hook('message_headers_output', array($this, 'listcommands_output'));
     }
   }
 
-  function imap_init($p)
+  function storage_init($p)
   {
     $rcmail = rcmail::get_instance();
     $mailinglist_headers = array_keys($this->get_list_headers());
@@ -41,9 +41,15 @@ class listcommands extends rcube_plugin
 
     foreach ($mailinglist_headers as $header => $title) {
       $key = strtolower($header);
+	  
       if($value = $p['headers']->others[$key]) {
-        $list_output .= $this->create_link($key, $value, $title) . '&nbsp;&nbsp;';
-      } 
+        if(is_string($value)){
+          $list_output .= $this->create_link($key, $value, $title) . '&nbsp;&nbsp;';
+        }
+        else{
+          $list_output .= $this->create_link($key, $value[0], $title) . '&nbsp;&nbsp;';
+        }
+      }
     }
     if($list_output != "")
       $p['output']['Mailinglist'] = array(
