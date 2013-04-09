@@ -1,6 +1,20 @@
 CHANGELOG listcommands
 ======================
 
+RELEASE 2.2.1
+-------------
+
+- fixed CHANGELOG
+
+RELEASE 2.2
+-----------
+
+- added french translation
+- added russian translation
+
+RELEASE 2.1
+-----------
+
 - bugfix: prevent error when multiple identical headers are present
 - added spanish translation, pull request https://github.com/corbosman/listcommands/pull/5
 
