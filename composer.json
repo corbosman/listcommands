@@ -14,8 +14,5 @@
   "support": {
           "email": "cor@roundcu.be",
           "issues": "https://github.com/corbosman/listcommands/issues"
-      },
-  "require": {
-          "curl/curl": "1.0"
-  }
+      }
 }
