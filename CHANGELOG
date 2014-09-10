@@ -1,6 +1,11 @@
 CHANGELOG listcommands
 ======================
 
+RELEASE 2.3.5
+
+- add german translation
+- fix composer.json
+
 RELEASE 2.2.3
 -------------
 
