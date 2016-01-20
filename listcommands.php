@@ -53,7 +53,10 @@ class listcommands extends rcube_plugin
     }
     if($list_output != "")
       $p['output']['Mailinglist'] = array(
-        'title' => $this->gettext('listcommands_mailinglist'), 'value' => $list_output);
+        'title' => $this->gettext('listcommands_mailinglist'),
+        'value' => $list_output,
+        'html'  => true
+      );
     return($p);
   }
 
