@@ -1,6 +1,10 @@
 CHANGELOG listcommands
 ======================
 
+RELEASE 2.5
+
+- fix escaped html bug
+
 RELEASE 2.3.5
 
 - add german translation
